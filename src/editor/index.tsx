@@ -176,9 +176,14 @@ class FakeEditor extends React.Component<any, FakeEditorState> {
 
   render() {
     let { value, activeTab, schema, hasUnsavedChanges, unsavedSchema } = this.state;
+    
     if (value == null || schema == null) {
       return <div className="faker-editor-container">Loading...</div>;
     }
+    console.log(unsavedSchema, "unsavedSchema")
+    console.log(schema, "Schema")
+    console.log(value, "Value")
+
 
     return (
       <div className="faker-editor-container">
